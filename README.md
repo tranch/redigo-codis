@@ -13,6 +13,7 @@ Redigo Codis is a go client for codis based on Redigo.
 import (
     "time"
 
+    "github.com/garyburd/redigo/redis"
     "github.com/tranch-xiao/redigo-codis"
 )
 
