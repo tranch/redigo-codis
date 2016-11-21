@@ -18,7 +18,7 @@ import (
 
 p := &codis.Pool{
     ZkServers: "localhost:2181",
-    ZkTimeout: time.Seconds * 60,
+    ZkTimeout: time.Second * 60,
     ZkPath: "/codis/proxy",
     Dail: func(network, address string) (redis.Conn, error) {
         conn, err := redis.Dial(network, address)
@@ -26,9 +26,9 @@ p := &codis.Pool{
             conn.Send("AUTH", "PASSWORD")
         }
         return conn, err
-    }
+    },
 }
 
-r = p.Get()
+r := p.Get()
 r.Do("SET", "key", "value")
 ```
