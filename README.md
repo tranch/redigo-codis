@@ -13,7 +13,7 @@ Redigo Codis is a go client for codis based on Redigo.
 import (
     "time"
 
-    "github.com/tranch/redigo-codis"
+    "github.com/tranch-xiao/redigo-codis"
 )
 
 p := &codis.Pool{
