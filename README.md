@@ -18,7 +18,7 @@ import (
 )
 
 p := &codis.Pool{
-    ZkServers: "localhost:2181",
+    ZkServers: []string{"locallhost:8021"},
     ZkTimeout: time.Second * 60,
     ZkPath: "/codis/proxy",
     Dail: func(network, address string) (redis.Conn, error) {
